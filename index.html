@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Фи</title>
+</head>
+<body>
+  <a href="https://amh767.github.io/webap/" id="fakeLink">Кликните здесь</a>
+
+  <script>
+    // Получение элемента ссылки
+    const fakeLink = document.getElementById("fakeLink");
+
+    // Изменение URL-адреса ссылки
+    fakeLink.href = "https://www.google.com/";
+
+    // Обработчик события клика на ссылку
+    fakeLink.addEventListener("click", function(event) {
+      // Отменяем стандартное действие перехода по ссылке
+      event.preventDefault();
+
+      // Выполняем редирект на Google.com
+      window.location.href = "https://www.google.com/";
+    });
+  </script>
+</body>
+</html>
